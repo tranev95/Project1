@@ -17,4 +17,6 @@ export const inventoryPageData = {
   inventoryItemDescription: '[data-test="inventory-item-desc"]',
   inventoryItemPrice: '[data-test="inventory-item-price"]',
   addToCartButton: '[data-test="add-to-cart-sauce-labs-backpack"]',
+  hamburgerMenuOption: '[data-test="about-sidebar-link"]',
+  hamburgerMenuOption2: '[data-test="logout-sidebar-link"]',
 }
