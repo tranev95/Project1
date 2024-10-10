@@ -1,5 +1,5 @@
-import { loginStandardUser } from './login-standard-user-flow'
+import { loginStandardUser } from "./login-standard-user-flow"
 
 export const flows = {
-    loginStandardUser
+  loginStandardUser,
 }
