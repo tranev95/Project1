@@ -11,12 +11,13 @@ export default defineConfig({
       reportDir: 'cypress/reports',
       overwrite: false,
       html: true,
-      json: true
+      json: true,
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
     chromeWebSecurity: false,
+    testIsolation: false,
   },
   // other configurations
 })

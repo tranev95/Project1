@@ -4,4 +4,6 @@ export const inventoryPageData = {
     hamburgerMenuButton: '.bm-burger-button',
     hamburgerMenuIcon: '.bm-icon',
     hamburgerMenuContainer: '.bm-menu',
+    hamburgerMenuXButton: '.bm-cross-button',
+    pageLogo: '.app_logo',
 }
