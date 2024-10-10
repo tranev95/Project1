@@ -67,14 +67,37 @@ describe("Login to the page using the standard user, and assert the elements vis
       .should("be.visible")
       .and("have.attr", "href", "https://twitter.com/saucelabs")
       .and("contain.text", "Twitter")
+      .click()
+    cy.intercept("GET", "https://twitter.com/saucelabs").as("twitterPage")
+    cy.get(elements.inventoryPageData.twitter).should(
+      "have.attr",
+      "href",
+      "https://twitter.com/saucelabs"
+    )
     cy.get(elements.inventoryPageData.facebook)
       .should("be.visible")
       .and("have.attr", "href", "https://www.facebook.com/saucelabs")
       .and("contain.text", "Facebook")
+      .click()
+    cy.intercept("GET", "https://www.facebook.com/saucelabs").as("facebookPage")
+    cy.get(elements.inventoryPageData.facebook).should(
+      "have.attr",
+      "href",
+      "https://www.facebook.com/saucelabs"
+    )
     cy.get(elements.inventoryPageData.linkedIn)
       .should("be.visible")
       .and("have.attr", "href", "https://www.linkedin.com/company/sauce-labs/")
       .and("contain.text", "LinkedIn")
+      .click()
+    cy.intercept("GET", "https://www.linkedin.com/company/sauce-labs/").as(
+      "linkedInPage"
+    )
+    cy.get(elements.inventoryPageData.linkedIn).should(
+      "have.attr",
+      "href",
+      "https://www.linkedin.com/company/sauce-labs/"
+    )
   })
   it("Locate the Cart button, assert the elements, no clicking it this time", () => {
     cy.get(elements.inventoryPageData.cartButton)
