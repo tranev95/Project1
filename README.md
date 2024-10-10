@@ -6,3 +6,9 @@ How to set up the project:
 2. npm install
 3. While in the root folder: npx cypress open
 4. To run a specific spec: npx cypress run loginPage.ts
+
+Optional:
+Before pushing your code, you can run "npx prettier . --write". The project has it's own prettier configuration.
+
+Next Step:
+Figure out a way to merge the .html reports
